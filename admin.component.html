@@ -1,0 +1,25 @@
+<app-c1></app-c1>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box" style="width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 0ch; border-radius: 25px;">
+      <mat-card-header>
+        <mat-card-title style="font-size: xx-large;"> users to accept</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+        </mat-card-content>
+       <table style="border: 1px black solid;  margin-left: 40%;">
+          <tr >
+              <th style="border: 1px black solid;padding: 10px;">username</th>
+              <th style="border: 1px black solid;"> accept/reject</th>
+        </tr> 
+        <tr style="border: 1px black solid;" *ngFor="let user of arr;let i = index;" >
+          <td style="border: 1px black solid;">{{user}}</td>
+          <td style="border: 1px black solid;"><button (click)="newreg(i)">accept</button><br>
+              <button (click)="rej(i)">reject</button>
+        </td>
+        </tr>
+
+       </table>
+      </form>
+    </mat-card>
+  </div>

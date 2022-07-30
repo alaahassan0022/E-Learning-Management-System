@@ -1,0 +1,33 @@
+
+<body>
+    <h1>.</h1> 
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box" style="width: 300px; margin-left: 40%; margin-top: 5%;">
+      <mat-card-header>
+        <mat-card-title style="font-size: x-large ; "> E-Learning System</mat-card-title>
+        <mat-card-title style="font-size: large; position: absolute;left: 100px;"> Register</mat-card-title>
+
+      </mat-card-header>
+      <form class="example-form"  [formGroup]="myForm" (ngSubmit)="add()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name" [(ngModel)]="Username" name="n" formControlName="name" >
+        </mat-form-field>
+            <br>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" formControlName="Email">
+          </mat-form-field>
+          <br>
+
+          <br>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" type="submit" [disabled]="myForm.invalid" >Submit</button>
+        <p> have an account? <a [replaceUrl]="true" routerLink="/" routerLinkActive="active" href="">login</a></p>
+      </form>
+    </mat-card>
+  </div>
+</body>
+ 

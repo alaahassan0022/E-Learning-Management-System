@@ -1,0 +1,26 @@
+<app-c1></app-c1>
+<body>
+    <div class="all">
+<h2>{{ title }}</h2>
+    
+    <h1>Current Credit Hours: {{ credit_hours }}</h1>
+    <h3>(min: 12, max: 19)</h3>
+    <!--<ul>
+        <li *ngFor="let course of courses">
+            {{ course[0] }} <br>
+            <img src={{ path+course.name+".png" }} alt="AAAAAAA" width="500" height="600">
+        </li>
+    </ul>-->
+    
+        <div *ngFor="let course of courses2" style = "border:2px solid grey; align-items:center;background-color: #EBEBEB;height: 400px;width: 300px; padding:10px;">
+            <h3 style="padding-left:40%;padding-top:5%;">{{ course.name }}</h3> <br>
+            <img src="{{course.img_src}}" alt="AAAAAAA" style = "height: 250px;width: auto; padding-left: 40px;"><br>
+            <button style="padding: 0 20% 0  " id = "{{ course.name }} Add" (click) = "add(course)">Add</button>
+            <button style="padding: 0 16% 0;" id = "{{ course.name }} remove" (click) = "credit_hours = rem_calc_new_credit_hours(course.enrolled , course.credit_hrs);course.enrolled = rem_calc_new_enrollment_status(course.enrolled)">Remove</button>
+            <!--<button id = "{{ course.name }} remove" (click) = "course.enrolled = 'F'">rem</button>-->
+            <!--<button id = "{{ course.name }} log" (click) = "log(course.enrolled)">log</button>-->
+        </div><br><br>
+        <p class="one" [innerHtml]="htmlToAdd"></p>
+        <button style=" align-content: center; padding-left: 7%;padding-right: 7%;" id = "enroll" (click) = "enroll_courses()">Enroll Courses</button>
+    </div>
+    </body>

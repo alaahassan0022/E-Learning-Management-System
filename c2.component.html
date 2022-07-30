@@ -1,0 +1,28 @@
+
+<body>
+   <h1>.</h1> 
+    
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" >
+    <mat-card class="box" style="width: 300px; margin-left: 40%; margin-top: 5%;">
+      <mat-card-header>
+        <mat-card-title style="font-size: x-large;"> E-Learning System</mat-card-title>
+     
+      </mat-card-header>
+      <form class="example-form" [formGroup]="myForm" (ngSubmit)="go()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Username"  [(ngModel)]='user1' name="n"  formControlName="name" >
+        </mat-form-field>
+            <br>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password"  formControlName="password" >
+          </mat-form-field>
+        </mat-card-content>
+     
+        <button mat-stroked-button   color="accent"  class="btn-block" type="submit" [disabled]="myForm.invalid">Login</button>
+        <p [hidden]="b">please register first !!!</p>
+        <p> Don't have an account? <a [replaceUrl]="true" routerLink="/Register" routerLinkActive="active" href="Register">Register</a></p>
+      </form>
+    </mat-card>
+  </div>
+</body>
