@@ -1,0 +1,7 @@
+.all,body{
+    background-image:url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed; 
+    padding:20px;
+} 

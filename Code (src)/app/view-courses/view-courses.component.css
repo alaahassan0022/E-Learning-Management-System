@@ -1,0 +1,16 @@
+.flex-container {
+    /* display: flex; */
+    justify-content: center;
+   display:flex;
+  }
+  html,body{
+    /* background-image: url(image.jpg);
+    background-size:auto auto; 
+    background-attachment:fixed; */
+
+    background: url(image.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

@@ -1,0 +1,5 @@
+html, body{
+    background-image: url(img.jpg);
+    background-size:auto auto; 
+    /* background-attachment:fixed; */
+}
