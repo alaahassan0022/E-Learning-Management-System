@@ -28,14 +28,8 @@ export class C2Component implements OnInit {
       password: ['', [Validators.required]]
       
     });
-    /* public formdata:FormGroup;
-  ngOnInit() { 
-  this.formdata = new FormGroup({ 
- Title: new FormControl("Angular Lab",
-Validators.required )
-     }); 
-  }
- */
+    this.ls.ngOnint();
+  
   }
   go(){
     if(this.ls.check(this.user1)){

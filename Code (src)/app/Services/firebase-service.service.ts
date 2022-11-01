@@ -13,7 +13,7 @@ export class FirebaseServiceService {
 
   constructor(private http:HttpClient) { }
 
-  url='https://ui-project-76593-default-rtdb.firebaseio.com/';
+  url='https://uidproject-308c7-default-rtdb.firebaseio.com/';
 
   
   getStudents():Observable<user>{

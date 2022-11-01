@@ -14,7 +14,7 @@ export class CourseRegSrvcService {
     {name:'CSS',img_src:'assets/img/CSS.jpg',credit_hrs:'4',enrolled:'F'},
     {name:'Java',img_src:'assets/img/Java.jpg',credit_hrs:'4',enrolled:'F'},
     {name:'JavaScript',img_src:'assets/img/JavaScript.jpg',credit_hrs:'4',enrolled:'F'},
-    {name:'Python Core',img_src:'assets/img/Python Core.jpg',credit_hrs:'4',enrolled:'F'}
+    {name:'PythonCore',img_src:'assets/img/PythonCore.jpg',credit_hrs:'4',enrolled:'F'}
     
   ];
     return courses;

@@ -1,4 +1,5 @@
-    body{
+    main{
+        height: 100%;
         background-image:url("img.jpg");
         
     }

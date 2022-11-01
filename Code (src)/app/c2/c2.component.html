@@ -1,11 +1,11 @@
-
-<body>
-   <h1>.</h1> 
-    
+<main>
+   <header style="text-align:center">
+    <h1 style="font-size: xx-large; padding-top: 40px;"><b> E-Learning System </b></h1>
+  </header>
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" >
-    <mat-card class="box" style="width: 300px; margin-left: 40%; margin-top: 5%;">
-      <mat-card-header>
-        <mat-card-title style="font-size: x-large;"> E-Learning System</mat-card-title>
+    <mat-card class="box" style="width: 250px; margin:auto; margin-top: 5%;">
+      <mat-card-header >
+        <mat-card-title style="font-size: large;"> Login<br></mat-card-title>
      
       </mat-card-header>
       <form class="example-form" [formGroup]="myForm" (ngSubmit)="go()">
@@ -15,7 +15,7 @@
         </mat-form-field>
             <br>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Password"  formControlName="password" >
+            <input matInput type="password" placeholder="Password"  formControlName="password" >
           </mat-form-field>
         </mat-card-content>
      
@@ -25,4 +25,4 @@
       </form>
     </mat-card>
   </div>
-</body>
+</main>

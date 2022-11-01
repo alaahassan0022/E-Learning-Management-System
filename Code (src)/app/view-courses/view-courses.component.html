@@ -1,62 +1,68 @@
 <app-c1></app-c1>
-<body>
-  <div class="container">
-      <h1 style="font-size: xxx-large; text-align: center; padding-top: 40px;"><b> Courses </b></h1>
 
-      <div  [hidden]="name!=a" style="margin-left:5%;">
-       <!-- <mat-form-field appearance="fill">
+<main style="height:100%; background-image:url(image.jpg); background-repeat: repeat;">
+  <div class="container">
+    <header style="text-align:center">
+      <h1 style="font-size: xx-large; padding-top: 40px;"><b> Courses </b></h1>
+    </header>
+    <div [hidden]="name!=a" style="margin-left:5%;">
+      <!-- <mat-form-field appearance="fill">
       </mat-form-field> -->
       <select [(ngModel)]="drop">
-        <option *ngFor="let x of stud_array"  >
+        <option *ngFor="let x of stud_array">
           {{x.Name}}
         </option>
       </select>
-      <button (click)="show_courses()"> Show Courses</button>  
-          <h2>Add Course </h2>
-          <form class="form-inline" autocomplete="off" (submit)="add()">
-              <div class="form-group">
-              <label for="name"> Name: &nbsp;</label>
+      <button (click)="show_courses()"> Show Courses</button>
+      <h2>Add Course </h2>
+      <form class="form-inline" autocomplete="off" (submit)="add()">
+        <div class="form-group">
+          <label for="name"> Name: &nbsp;</label>
 
-              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="course.name">
-              </div>
-              <br>
-              <button type="submit" class="btn btn-success" style = "cursor: pointer;">Submit</button>
-              <br><br>
-              
-            </form>
-            <button class="btn btn-success" style = "cursor: pointer; "(click)="done()">Done</button>
-      </div>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="course.name">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" style="cursor: pointer;">Submit</button>
+        <br><br>
 
-      <div class="course-list" *ngIf="coursesListuser && coursesListuser.length">
-        <h2 style = "margin-left: 5%;">List of Courses </h2>
-          <div class="table table-condensed">
-            <div class="flex-container" >
-              <div *ngFor="let course of coursesListuser; let i = index" class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" id="trial" style="margin-left: 1%;">
-                <mat-card class="box" style="width: 200px; height: auto; margin-right:70%;  margin-top: 5%; border: 0ch; border-radius: 25px;">
-                  <mat-card-header>
-                    <mat-card-title style="font-size: xx-large;"> </mat-card-title>
-                  </mat-card-header>
-                  <form class="example-form">
-                    <mat-card-content>
-                        <h1 style="font-size: xx-large;text-align: center;">{{course.name}}</h1>
-                        <!-- <a style="font-size: x-large; margin-top: 20px;" >{{course.name}}</a> -->
-                        <img mat-card-image src="assets/img/{{course.name}}.jpg" alt="Avatar" class="avatar" style="height:250px;" > 
-                        <div  [hidden]="name!=a">
-                            <button style="margin-right: 5px; cursor: pointer;" class="btn btn-warning" (click)="edit(i)">Edit</button>
-                            <button class="btn btn-danger"style = "cursor: pointer;" (click)="delete(i)">Delete</button>
-                        </div>
-                    </mat-card-content>
-                  </form>
-                </mat-card>
-              </div>
-            </div>
+      </form>
+      <button class="btn btn-success" style="cursor: pointer; " (click)="done()">Done</button>
+    </div>
+
+    <div class="course-list" *ngIf="coursesListuser && coursesListuser.length">
+      <h2 style="margin-left: 5%;">List of Courses </h2>
+      <div class="table table-condensed">
+        <div class="flex-container">
+          <div *ngFor="let course of coursesListuser; let i = index" class="login-wrapper" fxLayout="row"
+            fxLayoutAlign="center center" id="trial" style="margin-left: 1%;">
+            <mat-card class="box"
+              style="width: 200px; height: auto; margin-right:70%;  margin-top: 5%; border: 0ch; border-radius: 25px;">
+              <mat-card-header>
+                <mat-card-title style="font-size: x-large;"> </mat-card-title>
+              </mat-card-header>
+              <form class="example-form">
+                <mat-card-content>
+                  <h1 style="font-size: x-large;text-align: center;">{{course.name}}</h1>
+                  <!-- <a style="font-size: x-large; margin-top: 20px;" >{{course.name}}</a> -->
+                  <img mat-card-image src="assets/img/{{course.name}}.jpg" alt="Avatar" class="avatar"
+                    style="height:250px;">
+                  <div [hidden]="name!=a">
+                    <button style="margin-right: 5px; cursor: pointer;" class="btn btn-warning"
+                      (click)="edit(i)">Edit</button>
+                    <button class="btn btn-danger" style="cursor: pointer;" (click)="delete(i)">Delete</button>
+                  </div>
+                </mat-card-content>
+              </form>
+            </mat-card>
           </div>
         </div>
       </div>
-  </body>
-    <!-- <mat-card *ngFor="let course of coursesList; let i = index" class="box" style="width: 80%; border: 0ch; border-radius: 25px;margin-left: 5%; margin-top: 5%;"> -->
-  <!-- <mat-card-content> -->
-    <!-- <div class="flex-container" style="margin-right: 4%;">
+    </div>
+  </div>
+</main>
+<!-- <mat-card *ngFor="let course of coursesList; let i = index" class="box" style="width: 80%; border: 0ch; border-radius: 25px;margin-left: 5%; margin-top: 5%;"> -->
+<!-- <mat-card-content> -->
+<!-- <div class="flex-container" style="margin-right: 4%;">
       <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
           <mat-card class="box" style="width: 200px; height: 300px; margin-right:70%;  margin-top: 5%; border: 0ch; border-radius: 25px;">
             <mat-card-header>
@@ -72,10 +78,10 @@
             </form>
           </mat-card>
         </div> -->
-    
-      <!-- </mat-card-content> -->
-  <!-- </mat-card> -->
-    <!-- 
+
+<!-- </mat-card-content> -->
+<!-- </mat-card> -->
+<!-- 
       <body>
     <h1 style="color: white;">.</h1>
 <h1 style="font-size: xx-large; margin-left: 45%; margin-top: 5px;"><b>courses</b></h1>

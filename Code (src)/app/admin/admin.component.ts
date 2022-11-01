@@ -11,7 +11,7 @@ import { user } from '../c3/c3.component';
 })
 export class AdminComponent implements OnInit {
   arr = C3Component.uns;
-  constructor(private fb:FirebaseServiceService){}
+  constructor(private fb:FirebaseServiceService, private ls:LoginsrvService){}
   ngOnInit(): void {
   }
 
@@ -20,9 +20,9 @@ public newreg(i:number)//accept
 {
  //LoginsrvService.users.push(this.arr[i]);
  var un= this.arr[i];
- this.arr.splice(i,1);
+
  
- this.fb.createStudent(C3Component.register[i]).subscribe((response)=>{console.log(response);});
+ this.fb.createStudent(C3Component.register[i]).subscribe((response)=>{ this.arr.splice(i,1);console.log(response); this.ls.ngOnint();});
  //this.fb.getStudents().subscribe((response)=>{console.log(response);});
 }
 

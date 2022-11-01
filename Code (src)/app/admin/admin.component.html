@@ -1,25 +1,32 @@
 <app-c1></app-c1>
+<main>
+<header style="text-align:center">
+  <h1 style="font-size: xx-large; padding-top: 40px;"><b>Users Requesting Registration </b></h1>
+</header>
+<br><br>
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card class="box" style="width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 0ch; border-radius: 25px;">
-      <mat-card-header>
-        <mat-card-title style="font-size: xx-large;"> users to accept</mat-card-title>
-      </mat-card-header>
+    <!-- <mat-card class="box" style="width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 0ch; border-radius: 25px;"> -->
+      <!-- <mat-card-header>
+        <mat-card-title style="font-size: xx-large;"> Users Requesting Registration</mat-card-title>
+      </mat-card-header> -->
       <form class="example-form">
         <mat-card-content>
         </mat-card-content>
-       <table style="border: 1px black solid;  margin-left: 40%;">
+       <table       style="border: 1px black solid;   background-color: rgba(255, 255, 255, 0.574); width: 360px; margin:auto;">
+
           <tr >
-              <th style="border: 1px black solid;padding: 10px;">username</th>
-              <th style="border: 1px black solid;"> accept/reject</th>
+              <th style="border: 1px black solid;padding: 10px;">Username</th>
+              <th style="border: 1px black solid;"> Accept/Reject</th>
         </tr> 
         <tr style="border: 1px black solid;" *ngFor="let user of arr;let i = index;" >
           <td style="border: 1px black solid;">{{user}}</td>
-          <td style="border: 1px black solid;"><button (click)="newreg(i)">accept</button><br>
-              <button (click)="rej(i)">reject</button>
+          <td style="border: 1px black solid;"><button (click)="newreg(i)">Accept</button><br>
+              <button (click)="rej(i)">Reject</button>
         </td>
         </tr>
 
        </table>
       </form>
-    </mat-card>
+    <!-- </mat-card> -->
   </div>
+</main>

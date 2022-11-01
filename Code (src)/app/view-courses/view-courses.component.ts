@@ -86,6 +86,7 @@ export class ViewCoursesComponent implements OnInit {
 
   show_courses(){
     console.log(this.drop);
+    this.coursesListuser= [];
     for(var i =0 ;i<  LoginsrvService.arr.length ; i++){
 
       if( LoginsrvService.arr[i].Name== this.drop){
